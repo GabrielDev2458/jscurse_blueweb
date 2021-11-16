@@ -74,3 +74,59 @@ const myArray = [];
 const miArray = [];
 miArray[0] = ["nuevoElemento"];
 console.log(miArray);
+
+//Declaratives and Anonymous functions
+
+//  Declarative
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+console.log(randomNumber(1, 11));
+
+// Anonymous
+const rndNumber = function (min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+console.log(rndNumber(1, 11));
+
+/**
+ * TODO: Translate tip to english
+ *
+ * *TIP
+
+ * *La forma correcta de definir una función varía según el comportamiento que esperemos de la misma: con las funciones declaradas, tenemos la seguridad de que siempre estarán disponibles en tiempo de ejecución. Con las funciones expresadas, tendremos que éstas no son evaluadas hasta que el intérprete no alcance su posición en el código, lo cual puede generar errores en arquitecturas muy anidadas.
+ * *El hecho de que las funciones declarativas se evalúen antes que las expresiones, pueden producir comportamientos no deseados cuando forman parte de condicionales. Para estos casos, el uso de las funciones expresadas garantiza que éstas formarán parte del flujo general del programa, lo cual puede evitarnos sorpresa en determinados entornos.
+ */
+
+//Arrow functions
+
+const randomArrowLarge = (max) => {
+    return Math.floor(Math.random() * (max - 1)) + 1;
+}
+console.log(randomArrowLarge(11))
+
+const randomArrowShort = max => Math.floor(Math.random() * (max - 1)) + 1;
+console.log(randomArrowShort(11));
+
+/**
+ * TODO: Translate to english
+ *
+
+ * *Limitantes:
+
+ * *No tiene sus propios enlaces a this o super y no se debe usar como métodos.
+ * *No tiene argumentos o palabras clave new.target.
+ * *No apta para los métodos call, apply y bind, que generalmente se basan en establecer un ámbito o alcance
+ * * No se puede utilizar como constructor.
+*/
+
+//forEach
+let colors = ["red", "blue", "yelow"]
+colors.forEach((color, index, array) => {
+    console.log(color);//currentValue
+    console.log(index);//index
+    console.log(array);//array: Value to use as this when executing callbackFn
+})
+
