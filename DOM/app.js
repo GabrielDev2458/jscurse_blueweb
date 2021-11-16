@@ -26,3 +26,8 @@ boton.addEventListener("click", () => {
     parrafo.textContent = "Nuevo texto desde evento";
 });
 
+//createElement
+
+const li = document.createElement("li");
+li.textContent = "item desde javascript";
+console.log(li);
