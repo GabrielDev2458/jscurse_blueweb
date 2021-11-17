@@ -40,5 +40,45 @@ const newArray = arr.slice(1, 3);
 console.log(newArray);
 
 /**
- * TODO: REDUCE and spread min 1:14
+ * Reduce
+ * TODO: Translate and study more.
+ * *El método reduce() ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor
  */
+
+const numbers = [1, 2, 3, 4, 5];
+
+const addNumbers = numbers.reduce((previousValue, currentValue) => previousValue + currentValue); //acc: acumulador
+
+console.log(addNumbers);
+
+const fatMatrix = [
+    [0, 1],
+    [2, 3],
+    [4, 5],
+];
+
+console.log(fatMatrix);
+
+const flatMatrix = fatMatrix.reduce(
+    (acc, cur) => acc.concat(cur)
+);
+
+console.log(flatMatrix);
+
+/**
+ * Arguments
+ * *previousValue (the value resulting from the previous call to callbackfn) (acc)
+ * *currentValue (the value of the current element) (cur)
+ * *currentIndex Optional (idx)
+ * *array (the array to traverse) Optional (src)
+*/
+
+//split and join
+
+const months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
+
+const arrayMonths = months.split(",");
+const stringMonths = arrayMonths.join(",");
+
+console.log(arrayMonths);
+console.log(stringMonths);
